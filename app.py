@@ -67,7 +67,7 @@ if uploaded_files:
         # Create Visulization
         st.subheader("📊 Data Visualization")
         if st.checkbox(f"Show Visualization for {file.name}"):
-            st.bar_chart(df.select_dtypes(include="number").iloc[:,:2])
+            st.area_chart(df.select_dtypes(include="number").iloc[:,:2])
 
         
         # Convert CSV file to Excel
